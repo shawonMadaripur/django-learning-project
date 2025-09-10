@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method = "POST" style="width: 50%; margin:auto; margin-top:10px" >
+  {% csrf_token %}
+  <h3>add profile page</h3>
+  {{form | crispy}}
+  <input type="submit" value="submit" class="btn btn-warning" >
+</form>
+
+{% endblock content %}
+
+
